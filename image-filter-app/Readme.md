@@ -33,4 +33,15 @@ A simple and interactive web application built using **Flask** and **OpenCV** th
 ---
 
 ## 📂 Project Structure
+image-filter-app/
+│
+├── app.py # Main Flask application
+├── filters.py # Contains image filter functions
+├── static/ # Folder for static files (CSS, images)
+│ └── output.jpg # Processed output image
+├── templates/ # HTML templates
+│ ├── index.html # Upload form
+│ └── result.html # Display result
+└── image1.jpg # Sample image for testing
+
 
