@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter Studio 🎨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Welcome to the Image Filter Studio</h1>
+        
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="image" class="label">Upload Your Image</label>
+                <input type="file" name="image" accept="image/*" id="image" required class="input-file">
+            </div>
+
+            <div class="form-group">
+                <label for="filter" class="label">Choose a Filter</label>
+                <select name="filter" id="filter" class="input-select" required>
+                    <option value="grayscale">Grayscale</option>
+                    <option value="sepia">Sepia</option>
+                    <option value="negative">Negative</option>
+                    <option value="sketch">Sketch</option>
+                    <option value="blur">Blur</option>
+                    <option value="cartoon">Cartoon</option>
+                    <option value="emboss">Emboss</option>
+                    <option value="sharpness">Sharpness</option>
+                    <option value="brightness">Brightness</option>
+                    <option value="contrast">Contrast</option>
+                    <option value="noise">Noise</option>
+                    <option value="vignette">Vignette</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Apply Filter 🎯</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by YourName</p>
+    </footer>
+</body>
+</html>
